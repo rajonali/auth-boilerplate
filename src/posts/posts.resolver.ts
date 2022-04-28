@@ -27,6 +27,7 @@ export class PostsResolver {
     private usersService: UsersService,
   ) {}
 
+  
   @Query(() => [PostObject])
   posts(@Selections("posts", ["author"]) relations: string[]) {
     return this.postsService.findAll({ relations });

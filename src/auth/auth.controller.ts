@@ -11,7 +11,7 @@ import { RegisterUserResponse } from "./dto/register-user.response";
 import { LocalAuthGuard } from "./guards/local-auth.guard";
 
 @Controller("auth")
-export class AuthController {
+export class AuthController { 
   constructor(private authService: AuthService) {}
 
   @UseGuards(LocalAuthGuard)

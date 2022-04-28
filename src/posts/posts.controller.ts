@@ -26,6 +26,7 @@ export class PostsController {
     return this.postsService.create(user.id, createPostDto);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Get()
   findAll() {
     return this.postsService.findAll();
